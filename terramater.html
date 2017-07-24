@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet">
 <title>TERRA MATER</title>
 <meta charset="UTF-8">
@@ -43,6 +44,23 @@ mark {
 }
 
 </style>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</head>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -85,24 +103,6 @@ mark {
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-
 
   <!-- Project Section -->
   <div class="w3-container w3-padding-32" id="projects">
